@@ -86,7 +86,7 @@ const fooditem = [
 console.log(fooditem)
 const food = fooditem.map(item => {
     const listItem = ` <div class="${item.type} menu-items foodbox d-flex justify-content-between  mx-3" style="width: 30rem; ">
-    <div class="item-image w-50 border border-2 border-danger ">
+    <div class=" item-image w-75 ">
         <img src="./${item.foodimg}" alt="">
     </div>
     <div class="w-50 mx-3 ">
@@ -110,33 +110,34 @@ menu.forEach(m => {
         console.log(e.target.innerHTML)
         foodbox.forEach(box =>{
             box.classList.add('d-none')
-            if(e.target.innerHTML == 'All'){
+            console.log(e.target.innerHTML)
+            if(e.target.innerHTML == 'ALL'){
                 box.classList.remove('d-none')
             }
-            else if(e.target.innerHTML == 'Breakfast' ){
+            else if(e.target.innerHTML == 'BREAKFAST' ){
                 if(box.classList.contains('breakFast') )
                 {
                     box.classList.remove('d-none')
                 }
             }
-            else if(e.target.innerHTML == 'Lunch' ){
+             else if(e.target.innerHTML == 'LUNCH' ){
                 if(box.classList.contains('Lunch') )
-                {
+                 {
                     box.classList.remove('d-none')
-                }
-            }
-            else if(e.target.innerHTML == 'Shakes' ){
-                if(box.classList.contains('Shakes') )
+                 }
+             }
+             else if(e.target.innerHTML == 'SHAKE' ){
+                 if(box.classList.contains('Shakes') )
                 {
-                    box.classList.remove('d-none')
-                }
-            }
-            else if(e.target.innerHTML == 'Dinner' ){
-                if(box.classList.contains('Dinner') )
-                {
-                    box.classList.remove('d-none')
-                }
-            }
+                     box.classList.remove('d-none')
+                 }
+             }
+             else if(e.target.innerHTML == 'DINNER' ){
+                 if(box.classList.contains('Dinner') )
+                 {
+                     box.classList.remove('d-none')
+                 }
+             }
         })
     })
 })
